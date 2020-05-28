@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<bean id="articleDao"
+		class="com.stook.mvc.dao.impl.ArticleDaoImpl"></bean>
+	<bean id="articleService"
+		class="com.stook.mvc.service.impl.ArticleServiceImpl">
+		<property name="dao" ref="articleDao"></property>
+	</bean>
+	<bean id="categoryDao"
+		class="com.stook.mvc.dao.impl.CategoryDaoImpl"></bean>
+		<bean id="categoryService"
+		class="com.stook.mvc.service.impl.CategoryServiceImpl">
+		<property name="dao"  ref = "categoryDao"></property>
+		</bean>
+	
+	<bean id="clientDao"
+		class="com.stook.mvc.dao.impl.ClientDaoImpl"></bean>
+		<bean id="clientService"
+		class="com.stook.mvc.service.impl.ClientServiceImpl">
+		<property name="dao"  ref = "clientDao"></property>
+		</bean>
+	
+	<bean id="commandeClientDao"
+		class="com.stook.mvc.dao.impl.CommandeClientDaoImpl"></bean>
+		<bean id="commandeClientService"
+		class="com.stook.mvc.service.impl.CommandeClientServiceImpl">
+		<property name="dao"  ref = "commandeClientDao"></property>
+		</bean>
+		
+	<bean id="commandeFournisseurDao"
+		class="com.stook.mvc.dao.impl.CommandeFournisseurDaoImpl"></bean>
+		<bean id="commandeFournisseurService"
+		class="com.stook.mvc.service.impl.CommandeFournisseurServiceImpl">
+		<property name="dao"  ref = "commandeFournisseurDao"></property>
+		</bean>
+	
+	<bean id="fournisseurDao"
+		class="com.stook.mvc.dao.impl.FournisseurDaoImpl"></bean>
+		<bean id="fournisseurService"
+		class="com.stook.mvc.service.impl.FournisseurServiceImpl">
+		<property name="dao"  ref = "fournisseurDao"></property>
+		</bean>
+		
+	<bean id="ligneVenteDao"
+		class="com.stook.mvc.dao.impl.LigneVenteDaoImpl"></bean>
+		<bean id="ligneVenteService"
+		class="com.stook.mvc.service.impl.LigneVenteServiceImpl">
+		<property name="dao"  ref = "ligneVenteDao"></property>
+		</bean>
+	
+	<bean id="mvtStockDao"
+		class="com.stook.mvc.dao.impl.MvtStockDaoImpl"></bean>
+		<bean id="mvtStockService"
+		class="com.stook.mvc.service.impl.MvtStockServiceImpl">
+		<property name="dao"  ref = "mvtStockDao"></property>
+		</bean>
+		
+	<bean id="utilisateurDao"
+		class="com.stook.mvc.dao.impl.UtilisateurDaoImpl"></bean>
+		<bean id="utilisateurService"
+		class="com.stook.mvc.service.impl.UtilisateurServiceImpl">
+		<property name="dao"  ref = "utilisateurDao"></property>
+		</bean>
+		
+	<bean id="venteDao"
+		class="com.stook.mvc.dao.impl.VenteDaoImpl"></bean>
+		<bean id="venteService"
+		class="com.stook.mvc.service.impl.VenteServiceImpl">
+		<property name="dao"  ref = "venteDao"></property>
+		</bean>
+	
+</beans>
